@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-cover bg-center opacity-50 z-0"
+          style={{ backgroundImage: "url('/background.jpg')" }}
+        ></div>
+        <div className="relative z-10">
+          <Navbar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

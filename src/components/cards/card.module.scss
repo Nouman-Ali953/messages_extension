@@ -1,0 +1,66 @@
+.custom_container {
+    &:hover{
+    }
+    p{
+        padding-top: 3rem;
+        text-align: center;
+        width: 70%;
+    }
+    .wrapper{
+        display: flex;
+        position: relative;
+        button{
+            background-color: rgba(222, 147, 7, 0.215);
+            color: rgb(255, 166, 0);
+            padding: .6rem 1.9rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            width: 85%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            bottom: -.2rem;
+            display: none;
+            text-align: center;
+            svg{
+                font-size: 2rem;
+                margin-right: 3px;
+            }
+        }   
+        ul{
+            li{
+                font-size: 1rem;
+                color: rgba(88, 87, 87, 0.356);
+                svg{
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    color: rgba(0, 128, 255, 0.516);
+                }
+            }
+        }
+    }
+}
+.wrapper:hover{
+    transition: all .3s ;
+    transform: translateY(-5rem);
+    .title{
+        color: orange;
+    }
+    h2{
+        font-size: 2.8rem;
+    }
+    button{
+        display: flex;
+    }
+    ul{
+        li{
+            font-size: 1rem;
+            color: rgb(88, 87, 87);
+            svg{
+               
+                color: rgb(0, 128, 255);
+            }
+        }
+    }
+}

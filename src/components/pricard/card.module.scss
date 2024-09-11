@@ -1,0 +1,66 @@
+.custom_container {
+    &:hover{
+    }
+    p{
+        padding-top: 3rem;
+        text-align: center;
+        width: 70%;
+    }
+    .wrapper{
+        display: flex;
+        position: relative;
+        button{
+            background-color: rgba(7, 222, 7, 0.215);
+            color: green;
+            padding: .2rem 1rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            width: 85%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            bottom: 2rem;
+            text-align: center;
+            svg{
+                font-size: 2rem;
+                margin-right: 3px;
+            }
+            &:hover{
+                transition: .3s ease-in-out;
+                box-shadow: .4px 1px gray ;
+            }
+
+        }   
+        ul{
+            li{
+                font-size: 1rem;
+                color: rgba(88, 87, 87, 0.356);
+                svg{
+                    margin-right: 3px;
+                    margin-left: 3px;
+                    color: rgba(0, 128, 255, 0.516);
+                }
+            }
+        }
+    }
+}
+.wrapper:hover{
+    transition: all .3s ease-in-out;
+    
+    .title{
+        color: orange;
+    }
+  
+    ul{
+        li{
+            transition: all .3s ease-in-out;
+            font-size: 1rem;
+            color: rgb(88, 87, 87);
+            svg{
+               
+                color: rgb(0, 128, 255);
+            }
+        }
+    }
+}
