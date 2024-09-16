@@ -1,6 +1,5 @@
 import React from "react";
 import ExtensionIcon from "@mui/icons-material/Extension";
-import Slider from "@/components/slider/Slider";
 import Card from "@/components/cards/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 const Home = () => {
@@ -61,7 +60,7 @@ const Home = () => {
           <Card title="Campaigns" source="/campaigns.svg" />
           <Card title="Task" source="/tasks.svg" />
         </div>
-        {/* <Slider /> */}
+    
       </div>
     </div>
   );

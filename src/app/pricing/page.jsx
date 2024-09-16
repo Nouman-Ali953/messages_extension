@@ -54,7 +54,7 @@ const page = () => {
           <PriCard info="Pro Plan" title="$ 12" points={paymentDataPro} />
           <PriCard info="Premium Plan" title="$ 20" points={paymentDataPremium}/>
         </div>
-        {/* <Slider /> */}
+      
       </div>
   )
 }
