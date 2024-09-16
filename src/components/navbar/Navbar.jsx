@@ -48,6 +48,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between h-full px-4 md:px-8 lg:px-16">
         {/* Logo */}
         <div className="flex-shrink-0">
+        <Link href='/'>
           <Image
             src="/logo.png"
             width={isScrolled ? 160 : 220}
@@ -55,6 +56,7 @@ const Navbar = () => {
             alt="logo"
             className="transition-all duration-300 ease-in-out"
           />
+        </Link>
         </div>
 
         {/* Navigation Items */}
