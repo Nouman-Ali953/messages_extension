@@ -8,15 +8,14 @@ const Home = () => {
     <div className=" w-full h-100vh ">
       <div className="flex justify-center w-full flex-col gap-6  h-[70vh] px-10 mt-12">
         <h2 className="text-[2rem] text-[#FB9808] italic font-extrabold -mt-8">
-          Supertool For WhatsApp
+        Boost Your WhatsApp Efficiency with THE ZENDER
         </h2>
-        <div className="w-[50%] h-[1px] bg-gray-400"></div>
-        <h4 className="text-gray-500 text-md -mt-4 tracking-[1.2px]">
-          Smart Chrome Extension For WhatsApp Web
+        <div className="h-[1px] bg-gray-400 w-[65%]"></div>
+        <h4 className="text-gray-500 text-md -mt-4 tracking-[1.2px] w-[70%]">
+        Easily schedule WhatsApp messages, manage groups communication, and automate tasks. 
         </h4>
-        <p className="w-[55%] text-[1.1rem] leading-7 text-gray-400">
-          JONI enhances WhatsApp Web with cool features to increase your
-          productivity and save you time on a daily basis
+        <p className="w-[55%] text-[1.1rem] leading-7 text-gray-400 tracking-wider font-sans">
+        Perfect for business owners and group admins looking to streamline their workflow and save time.
         </p>
         <div className=" flex  w-full">
           <button
