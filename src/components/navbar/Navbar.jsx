@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import TemporaryDrawer from "../temp_drawer/TemporaryDrawer";
 
 // Navigation items
 const navItems = [
@@ -23,6 +24,10 @@ const debounce = (func, wait = 10) => {
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const toggleDrawer = () => {
+    setOpen(!open)
+  }
 
   useEffect(() => {
     const handleScroll = debounce(() => {
@@ -48,15 +53,18 @@ const Navbar = () => {
       <div className="flex items-center justify-between h-full px-4 md:px-8 lg:px-16">
         {/* Logo */}
         <div className="flex-shrink-0">
-        <Link href='/'>
-          <Image
-            src="/logo.png"
-            width={isScrolled ? 160 : 220}
-            height={isScrolled ? 160 : 220}
-            alt="logo"
-            className="transition-all duration-300 ease-in-out"
-          />
-        </Link>
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              width={isScrolled ? 160 : 220}
+              height={isScrolled ? 160 : 220}
+              alt="logo"
+              className="transition-all duration-300 ease-in-out"
+            />
+          </Link>
+        </div>
+        <div className="hidden sm:flex">
+          <TemporaryDrawer open={open}/>
         </div>
 
         {/* Navigation Items */}
@@ -64,15 +72,11 @@ const Navbar = () => {
           <ul className="flex space-x-6 lg:space-x-10">
             {navItems.map((item) => (
               <li key={item.id}>
-                <Link href={item.link}
-                  
-                    className={`${
-                      "text-gray-900" 
-                    } text-[1rem] lg:text-[1.12rem] font-medium tracking-wide transition-colors duration-300`}
+                <Link
+                  href={item.link}
+                  className={`${"text-gray-900"} text-[1rem] lg:text-[1.12rem] font-medium tracking-wide transition-colors duration-300`}
                 >
-                
-                    {item.title}
-                  
+                  {item.title}
                 </Link>
               </li>
             ))}
@@ -80,7 +84,7 @@ const Navbar = () => {
         </div>
 
         {/* Button */}
-        <div className="hidden md:flex items-center justify-center">
+        <div className="hidden lg:flex items-center justify-center">
           <button
             className={`${
               isScrolled
@@ -94,7 +98,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
-          <button className="text-white focus:outline-none">
+          <button className="text-white focus:outline-none " onClick={toggleDrawer}>
             {/* You can replace this with a hamburger menu icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"

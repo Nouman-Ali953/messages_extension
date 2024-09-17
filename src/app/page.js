@@ -2,6 +2,7 @@ import React from "react";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import Card from "@/components/cards/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { SwipeableDrawer } from "@mui/material";
 const Home = () => {
   return (
     <div className=" w-full h-100vh ">
@@ -60,7 +61,6 @@ const Home = () => {
           <Card title="Campaigns" source="/campaigns.svg" />
           <Card title="Task" source="/tasks.svg" />
         </div>
-    
       </div>
     </div>
   );
