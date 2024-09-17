@@ -32,12 +32,12 @@ const Home = () => {
         </div>
 
       </div>
-      <div className="mt-[10rem] bg-[#FFFCF2] w-full h-[180vh] flex items-center justify-center flex-col py-16">
+      <div className="mt-[10rem] bg-[#FFFCF2] w-full min-h-[180vh] flex items-center justify-center flex-col py-16">
         <div className="flex flex-col gap-4 items-center tracking-wider">
           <h2 className="text-center text-[3rem] p-3 pt-0 font-extrabold">
             Upgrade your business
           </h2>
-          <p className="-mt-4 text-xl">
+          <p className="-mt-4 text-xl text-center">
             Use our special tools for{" "}
             <span className="font-bold hover:text-orange-500 transition-colors ease-in-out cursor-pointer">
               {" "}
@@ -55,7 +55,7 @@ const Home = () => {
             </span>
           </p>
         </div>
-        <div className="flex mt-[8rem] w-full h-full justify-evenly">
+        <div className="flex mt-[8rem] w-full h-full justify-evenly flex-wrap gap-8">
           <Card title="Basic" source="/scheduler.svg" />
           <Card title="Campaigns" source="/campaigns.svg" />
           <Card title="Task" source="/tasks.svg" />
