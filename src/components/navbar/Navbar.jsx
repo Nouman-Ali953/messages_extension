@@ -24,10 +24,12 @@ const debounce = (func, wait = 10) => {
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  
   const toggleDrawer = () => {
-    setOpen(!open)
-  }
+    setDrawerOpen(!drawerOpen);
+  };
 
   useEffect(() => {
     const handleScroll = debounce(() => {
@@ -63,8 +65,10 @@ const Navbar = () => {
             />
           </Link>
         </div>
+        
+         {/* Drawer */}
         <div className="hidden sm:flex">
-          <TemporaryDrawer open={open}/>
+          <TemporaryDrawer isOpen={drawerOpen} />
         </div>
 
         {/* Navigation Items */}
